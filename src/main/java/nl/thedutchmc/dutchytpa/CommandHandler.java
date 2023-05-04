@@ -24,15 +24,15 @@ public class CommandHandler implements CommandExecutor {
 
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 	if (!(sender instanceof Player)) {
-	  sender.sendMessage(ChatColor.RED + "Only players may use this command!");
+	  sender.sendMessage(ChatColor.RED + "No puedes ejecutar este comando desde consola.");
 	  return true;
 	}
 	if (command.getName().equals("tpa")) {
 	  if (!sender.hasPermission("tpa.tpa"))
-		sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+		sender.sendMessage(ChatColor.RED + "¡No tienes Permisos para usar este comando!");
 	  if (args.length == 1) {
 		if (!Bukkit.getOnlinePlayers().contains(Bukkit.getPlayer(args[0]))) {
-		  sender.sendMessage(ChatColor.RED + "Player is not online!");
+		  sender.sendMessage(ChatColor.RED + "El jugador no está conectado.");
 		  return true;
 		}
 		Player target = Bukkit.getPlayer(args[0]);
