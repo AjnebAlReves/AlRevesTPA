@@ -1,5 +1,4 @@
 # AlRevesTPA
-=======================
 Minecraft 1.8+
 
 This is a very, very simple TPA plugin.
